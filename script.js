@@ -1,5 +1,4 @@
-
-<script>
+// CAROUSEL
 let slides = document.querySelectorAll('.slide');
 let index = 0;
 
@@ -9,14 +8,17 @@ setInterval(()=>{
   slides[index].classList.add('active');
 },4000);
 
+// LANGUAGE TOGGLE
 function toggleLang(){
   document.querySelectorAll('[data-en]').forEach(el=>{
-    el.textContent = el.textContent === el.dataset.en ? el.dataset.es : el.dataset.en;
+    el.textContent =
+      el.textContent === el.dataset.en
+        ? el.dataset.es
+        : el.dataset.en;
   });
 }
 
-// inicializar texto
+// INIT TEXT
 document.querySelectorAll('[data-en]').forEach(el=>{
   el.textContent = el.dataset.en;
 });
-</script>
