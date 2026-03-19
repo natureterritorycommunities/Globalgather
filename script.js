@@ -1,26 +1,22 @@
 
-let currentLang='en';
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(()=>{
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+},4000);
 
 function toggleLang(){
-  currentLang=currentLang==='en'?'es':'en';
   document.querySelectorAll('[data-en]').forEach(el=>{
-    el.innerText=el.getAttribute('data-'+currentLang);
+    el.textContent = el.textContent === el.dataset.en ? el.dataset.es : el.dataset.en;
   });
 }
 
-// CAROUSEL AUTO
-let slides=document.querySelectorAll('.slide');
-let index=0;
-
-function showSlides(){
-  slides.forEach(s=>s.classList.remove('active'));
-  index=(index+1)%slides.length;
-  slides[index].classList.add('active');
-}
-
-setInterval(showSlides,4000);
-
-window.onload=()=>{
-  toggleLang();
-  slides[0].classList.add('active');
-};
+// inicializar texto
+document.querySelectorAll('[data-en]').forEach(el=>{
+  el.textContent = el.dataset.en;
+});
+</script>
