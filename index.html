@@ -197,12 +197,75 @@
 <!-- REGISTER -->
 <section id="register" class="container section">
   <h2 data-en="Register" data-es="Registro"></h2>
+<form 
+  class="form"
+  action="https://formspree.io/f/myknoykw"
+  method="POST"
+>
 
-  <form class="form">
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <button class="btn">Submit</button>
-  </form>
+  <h3>Event Registration</h3>
+
+  <!-- NAME -->
+  <input 
+    type="text" 
+    name="name" 
+    placeholder="Full Name" 
+    required
+  >
+
+  <!-- EMAIL -->
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="Email Address" 
+    required
+  >
+
+  <!-- ORGANIZATION -->
+  <input 
+    type="text" 
+    name="organization" 
+    placeholder="Organization / Community"
+  >
+
+  <!-- COUNTRY -->
+  <input 
+    type="text" 
+    name="country" 
+    placeholder="Country"
+  >
+
+  <!-- ROLE -->
+  <select name="role" required>
+    <option value="">Select your role</option>
+    <option>Community Leader</option>
+    <option>Indigenous Representative</option>
+    <option>Researcher</option>
+    <option>NGO / Organization</option>
+    <option>Student</option>
+    <option>Other</option>
+  </select>
+
+  <!-- PARTICIPATION TYPE -->
+  <select name="participation">
+    <option value="">Participation type</option>
+    <option>In-person</option>
+    <option>Virtual</option>
+  </select>
+
+  <!-- MESSAGE -->
+  <textarea 
+    name="message" 
+    placeholder="Tell us about your interest in the event (optional)"
+  ></textarea>
+
+  <!-- HIDDEN SUBJECT -->
+  <input type="hidden" name="_subject" value="New Event Registration">
+
+  <!-- SUBMIT -->
+  <button type="submit" class="btn">Register</button>
+
+</form>
 </section>
 
 <script src="script.js"></script>
