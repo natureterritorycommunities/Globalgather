@@ -216,3 +216,26 @@ input{
     padding:40px 0;
   }
 }
+
+.form{
+  max-width:450px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.form h3{
+  margin-bottom:10px;
+}
+
+input, select, textarea{
+  padding:12px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  font-size:0.95rem;
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
