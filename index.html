@@ -3,22 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Gathering for Nature, Territory and Communities</title>
+  <title>Global Gathering</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; line-height:1.6; }
-    header { position:fixed; top:0; width:100%; background:#1b4332; color:white; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; z-index:1000; }
-    nav a { color:white; margin:0 10px; text-decoration:none; }
-    .container { padding:80px 20px; max-width:1000px; margin:auto; }
-    section { margin-bottom:60px; }
-    h1,h2 { color:#1b4332; }
-    .hero { background:#d8f3dc; padding:120px 20px; text-align:center; }
-    .btn { background:#2d6a4f; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; }
-    .themes { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
-    .card { background:#f1faee; padding:15px; border-radius:8px; }
-    footer { background:#1b4332; color:white; text-align:center; padding:20px; }
-    .lang-toggle { cursor:pointer; background:#95d5b2; border:none; padding:5px 10px; border-radius:5px; }
+    :root {
+      --green:#1b4332;
+      --light:#f1faee;
+      --earth:#9c6644;
+      --accent:#2d6a4f;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:'Inter', sans-serif;
+      line-height:1.6;
+      background:#f8f9fa;
+      color:#333;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(27,67,50,0.95);
+      backdrop-filter: blur(6px);
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      padding:15px 30px;
+      z-index:1000;
+    }
+
+    nav a{
+      color:white;
+      margin:0 12px;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    nav a:hover{opacity:0.7}
+
+    .lang-toggle{
+      background:var(--accent);
+      border:none;
+      color:white;
+      padding:6px 12px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    section{
+      padding:100px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+      background-size:cover;
+      color:white;
+    }
+
+    h1{
+      font-family:'Playfair Display', serif;
+      font-size:2.8rem;
+      margin-bottom:20px;
+    }
+
+    h2{
+      font-size:2rem;
+      margin-bottom:20px;
+      color:var(--green);
+    }
+
+    p{margin-bottom:15px}
+
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:12px 25px;
+      border-radius:8px;
+      text-decoration:none;
+      margin-top:20px;
+      display:inline-block;
+    }
+
+    .themes{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    form input{
+      width:100%;
+      padding:10px;
+      margin-bottom:10px;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+
+    footer{
+      background:var(--green);
+      color:white;
+      text-align:center;
+      padding:30px;
+    }
+
+    html{scroll-behavior:smooth}
   </style>
 </head>
+
 <body>
 
 <header>
@@ -33,40 +149,41 @@
   <button class="lang-toggle" onclick="toggleLang()">ES</button>
 </header>
 
-<section id="home" class="hero container">
+<section id="home" class="hero">
   <h1 data-en="Global Gathering for Nature, Territory and Communities" data-es="Encuentro Global por la Naturaleza, los Territorios y las Comunidades"></h1>
   <p>April 3–5, 2026 | Imbabura, Ecuador</p>
-  <p data-en="A global space to connect Indigenous Peoples..." data-es="Un espacio global que reunirá a pueblos indígenas..."></p>
+  <p data-en="A global space to connect Indigenous Peoples, local communities, researchers, activists, and territorial leaders." data-es="Un espacio global que reunirá a pueblos indígenas, comunidades locales, investigadores y defensores."></p>
   <a href="#register" class="btn">Register</a>
 </section>
 
-<section id="about" class="container">
-  <h2 data-en="About" data-es="Sobre el evento"></h2>
-  <p data-en="The Global Gathering for Nature, Territory and Communities brings together leaders..." data-es="El Encuentro Global por la Naturaleza reunirá a líderes..."></p>
+<section id="about">
+  <h2 data-en="About the Event" data-es="Sobre el evento"></h2>
+  <p data-en="This gathering brings together global leaders to protect territories and ecosystems." data-es="Este encuentro reúne líderes globales para proteger territorios y ecosistemas."></p>
 </section>
 
-<section id="themes" class="container">
+<section id="themes">
   <h2 data-en="Key Themes" data-es="Ejes temáticos"></h2>
   <div class="themes">
-    <div class="card" data-en="Territorial Governance and Indigenous Leadership" data-es="Gobernanza territorial y liderazgo indígena"></div>
-    <div class="card" data-en="Community-Based Conservation" data-es="Conservación comunitaria"></div>
+    <div class="card" data-en="Territorial Governance" data-es="Gobernanza territorial"></div>
     <div class="card" data-en="Climate Justice" data-es="Justicia climática"></div>
+    <div class="card" data-en="Community Conservation" data-es="Conservación comunitaria"></div>
+    <div class="card" data-en="Women & Youth Leadership" data-es="Liderazgo de mujeres y juventudes"></div>
   </div>
 </section>
 
-<section id="program" class="container">
+<section id="program">
   <h2 data-en="Program" data-es="Programa"></h2>
-  <p>Day 1 – Territories, Knowledge and Community Leadership</p>
-  <p>Day 2 – Collaboration and Innovation</p>
-  <p>Day 3 – Global Alliances</p>
+  <p><strong>Day 1:</strong> Territories & Knowledge</p>
+  <p><strong>Day 2:</strong> Innovation & Collaboration</p>
+  <p><strong>Day 3:</strong> Global Alliances</p>
 </section>
 
-<section id="register" class="container">
+<section id="register">
   <h2 data-en="Register" data-es="Registro"></h2>
   <form>
-    <input type="text" placeholder="Name" required><br><br>
-    <input type="email" placeholder="Email" required><br><br>
-    <input type="text" placeholder="Organization"><br><br>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Organization">
     <button class="btn">Submit</button>
   </form>
 </section>
@@ -76,19 +193,18 @@
 </footer>
 
 <script>
-let currentLang = 'en';
+let currentLang='en';
 
-function toggleLang() {
-  currentLang = currentLang === 'en' ? 'es' : 'en';
-  document.querySelector('.lang-toggle').innerText = currentLang === 'en' ? 'ES' : 'EN';
+function toggleLang(){
+  currentLang = currentLang==='en'?'es':'en';
+  document.querySelector('.lang-toggle').innerText = currentLang==='en'?'ES':'EN';
 
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.innerText = el.getAttribute('data-' + currentLang);
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.innerText = el.getAttribute('data-'+currentLang);
   });
 }
 
-// Initialize
-window.onload = () => toggleLang();
+window.onload=()=>toggleLang();
 </script>
 
 </body>
