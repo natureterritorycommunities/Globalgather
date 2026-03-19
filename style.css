@@ -1,0 +1,39 @@
+:root{
+  --green:#1b4332;
+  --accent:#2d6a4f;
+  --earth:#9c6644;
+}
+
+body{font-family:'Inter',sans-serif;margin:0}
+
+header{
+  position:fixed;
+  width:100%;
+  background:rgba(27,67,50,0.9);
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  color:white;
+}
+
+section{padding:100px 20px}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+  background-size:cover;
+  color:white;
+}
+
+.btn{
+  background:var(--accent);
+  padding:10px 20px;
+  color:white;
+  border-radius:5px;
+}
+
+.card{padding:20px;background:white;margin:10px}
