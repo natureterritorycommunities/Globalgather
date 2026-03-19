@@ -1,14 +1,17 @@
-// CAROUSEL
 let slides = document.querySelectorAll('.slide');
 let index = 0;
 
+function showSlide(i){
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
 setInterval(()=>{
-  slides[index].classList.remove('active');
   index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
+  showSlide(index);
 },4000);
 
-// LANGUAGE TOGGLE
+// LANG
 function toggleLang(){
   document.querySelectorAll('[data-en]').forEach(el=>{
     el.textContent =
